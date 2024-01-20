@@ -1,0 +1,52 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+}
+
+
+
+.title {
+  
+}
+
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  li {
+    list-style: none;
+  }
+}
+
+a {
+  text-decoration: none;
+  color:$text-color-primary;
+}
+
+.container {
+  box-sizing: border-box;
+  max-width: $breakpoint_l;   
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@include tablet{
+  .container {
+    box-sizing: border-box;
+    max-width: 76.8rem;   
+  }
+}
+
+@include mobile{
+  .container {
+    box-sizing: border-box;
+    max-width: 39rem;   
+  }
+}

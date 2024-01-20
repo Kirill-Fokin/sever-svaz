@@ -5,9 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sever svyaz</title>
   <link type="image/x-icon" href="/src/assets/logos/favicon.ico" rel="shortcut icon">
-  <link rel="stylesheet" href="#">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/css/style.css">
 </head>
-<body>
+<body class="body">
+  <button class="button pay-button">
+    <span>оплатить услуги</span>
+    <img src="./src/assets/logos/wallet.png" alt="wallet">
+  </button>
   <div class="container">
     <header class="header header__wrapper">
       <div class="logo header__wrapper">
@@ -16,7 +23,7 @@
         </a>
       </div>
       <button class="header__burger-btn" id="burger">
-        <span></span><span></span>
+        <span></span><span></span><span></span>
       </button>
       <nav class="header__menu menu">
         <ul class="menu__list">
@@ -99,5 +106,6 @@
       </section>
     </main>
   </div>
+  <script src="./src/index.js"></script>
 </body>
 </html>

@@ -1,0 +1,27 @@
+@include tablet{
+   .header {
+
+   &.open .menu {
+     right: 0;
+   }
+
+    .menu {
+      z-index: 99999;
+      transition: right 1s;
+       flex-direction: column;
+       position: absolute;
+       right: -100vw;
+       top: 0;
+       width:100vw;
+       height: 100vh;
+       border: 1px solid red;
+    }
+    .header__number {
+      display: none;
+    }
+   }
+}
+  
+  @include mobile{
+  
+}
