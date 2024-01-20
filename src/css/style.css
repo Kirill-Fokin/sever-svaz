@@ -311,17 +311,24 @@ template {
   display: none;
 }
 
+.main .systems .title {
+  font-family: "Inter", sans-serif;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 130%;
+}
+
 .main .service .card-layout .card__title, .main .service .title {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   line-height: 130%;
 }
 
 .header .header__number a, .header .menu__link {
   font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 150%;
 }
@@ -359,6 +366,11 @@ button:hover {
   position: fixed;
   top: 50%;
   right: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -403,14 +415,14 @@ a {
           flex-direction: column;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .container {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    max-width: 76.8rem;
+    max-width: 65.4rem;
   }
 }
-@media (max-width: 390px) {
+@media (max-width: 500px) {
   .container {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -435,6 +447,7 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  display: none;
 }
 
 .header__burger-btn span {
@@ -483,7 +496,7 @@ a {
           transform: translateY(0) rotate(-45deg);
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .header__burger-btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -501,19 +514,32 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.header__wrapper {
+  padding-top: 0.5rem;
+}
 .header .menu__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-column-gap: 2rem;
-     -moz-column-gap: 2rem;
-          column-gap: 2rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
 }
 .header .menu__link {
   display: block;
+  height: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
@@ -521,15 +547,31 @@ a {
 .header .menu__link:hover {
   color: #EE2523;
 }
+.header .header__number .phonelogo {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  background-image: url("/src/assets/logos/logo-phone.png");
+}
 .header .header__number a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   color: #EE2523;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .header.open .menu {
     right: 0;
   }
   .header .menu {
+    display: none;
     z-index: 99999;
     -webkit-transition: right 1s;
     transition: right 1s;
@@ -552,10 +594,22 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background-color: #F8F8F8;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .systems .title {
+  max-width: 90rem;
 }
 .main .systems-image {
   max-width: 100%;
   height: auto;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 .main .service {
   display: -webkit-box;
@@ -595,11 +649,55 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  row-gap: 2rem;
+}
+.main .service .card-layout .card__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.main .service .card-layout .card__content {
+  max-width: 38rem;
+}
+.main .service .card-layout .card .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.main .service .card-layout .card .price__subprice {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.main .service .card-layout .card .price__subprice:nth-child(1) {
+  font-size: 5rem;
+}
+.main .service .card-layout .card .price__number {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 4.8rem;
 }
 .main .service .card-layout .card__image {
   max-width: 38rem;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .main .service .card-layout .card {
     max-width: 27.4rem;
   }

@@ -6,6 +6,7 @@
    }
 
     .menu {
+      display: none;
       z-index: 99999;
       transition: right 1s;
        flex-direction: column;

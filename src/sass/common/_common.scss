@@ -1,17 +1,18 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 10px;
 }
 
 body {
   position: relative;
+  // background-color: #F8F8F8;
 }
-
-
 
 .title {
-  
 }
-
 
 body {
   display: flex;
@@ -40,7 +41,7 @@ a {
 @include tablet{
   .container {
     box-sizing: border-box;
-    max-width: 76.8rem;   
+    max-width: 65.4rem;   
   }
 }
 
