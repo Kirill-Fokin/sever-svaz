@@ -24,11 +24,11 @@
 
     //  console.log(payButtonText)
       if (window.innerWidth > 491 ) {
-        console.log(1)
+        // console.log(1)
         document.querySelector('.pay-button').childNodes[1].textContent = 'Оплатить услуги'
 
       } else {
-        console.log(2)
+        // console.log(2)
         document.querySelector('.pay-button').childNodes[1].textContent  = 'Оплатить'
       }
 
@@ -41,11 +41,11 @@
 
       //  console.log(payButtonText)
         if (window.innerWidth > 491 ) {
-          console.log(1)
+          // console.log(1)
           document.querySelector('.pay-button').childNodes[1].textContent = 'Оплатить услуги'
   
         } else {
-          console.log(2)
+          // console.log(2)
           document.querySelector('.pay-button').childNodes[1].textContent  = 'Оплатить'
         }
   
@@ -54,11 +54,11 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       
-      console.log('ready')
+      // console.log('ready')
       const cardLayout = document.querySelector('.card-layout')
       // console.log(cardLayout)
       if (window.innerWidth < 1072 && window.innerWidth > 687) {
-        console.log('yes')
+        // console.log('yes')
         cardLayout.style.justifyContent = 'left';
 
       } else {
