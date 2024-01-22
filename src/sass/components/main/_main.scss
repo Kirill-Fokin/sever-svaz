@@ -1,100 +1,166 @@
 .main {
-   .systems {
+  .systems {
+    display: flex;
+    background-color: #F8F8F8;
+    align-items: center;
+
+    &__content {
+      position: absolute;
+      padding-top: 1rem;;
       display: flex;
-      background-color: #F8F8F8;
-      align-items: center;
+      flex-direction: column;
+      row-gap: 3.5rem;
+    }
 
-      .title {
-        max-width: 90rem;
-        @extend %main-title;
-      }
+    &__button {
 
-      &__title {
+    }
+
+    .title {
+      max-width: 71rem;
+      @extend %main-title;
+
      
-      }
+    }
 
-      &-image {
-        max-width:100%;
-        height:auto;
-        align-self: center;
-        justify-self: center;
-      }
+    &-image {
+      // max-width:100%;
+      height:auto;
+      align-self: center;
+      justify-self: center;
+      // position: relative;
+      max-width: 80.4rem;
+      left: 17rem;
+      margin-left:88rem;
+      height: 41.2rem;
+    }
    }
 
-   .service {
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__wrapper {
+      padding-top: 6.8rem;
+    }
+   
     .title {
       align-self: flex-start;
       @extend %title;
     }
+
+    .card-layout {
       display: flex;
-      flex-direction: column;
-      align-items: center;
+      flex-wrap: wrap;
+      column-gap: 6rem;
 
-      .card-layout {
+      &__wrapper {
+        padding-top: 4.7rem;
+      }
+
+      .card {
         display: flex;
-        flex-wrap: wrap;
-        column-gap: 2rem;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 44rem;
+        row-gap: 2.5rem;
+        padding: 4rem 3rem;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 
-        .card {
+
+
+         &__title {
+           font-size: 2.4rem ;
+         }
+
+         &__text {
+           color: gray;
+           line-height: 1.9rem;
+           height: 8rem;
+         }
+
+       &__image {
+        max-width: 38rem;
+       }
+
+        &__bottom {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: -0.5rem;
+          align-items: center;
+          column-gap: 3rem;
+
+         
+        }
+
+        &__content {
+          max-width: 38rem;
           display: flex;
           flex-direction: column;
-          max-width: 44rem;
-          align-items: center;
-         row-gap: 2rem;
+          row-gap: 1rem;
+        }
 
-         &__bottom {
+        .price {
           display: flex;
-          flex-direction: row-reverse;
-         justify-content: space-between
-         }
-
-         &__content {
-          max-width: 38rem;
-         }
-
-         .price {
-          display: flex;
-          justify-content: center;
+          // justify-content: center;
           align-items: center;
+          justify-content: flex-start;
+          column-gap: 1rem;
+          margin-top: 0rem;
+          width: 13rem;
+
+          
+          &__up-number {
+            font-size: 2rem;
+            font-family: Inter,sans-serif;
+            font-size: 2.4rem;
+            font-family: 500;
+            position: relative;
+            top: 0.6rem;
+          }
           
           
           &__subprice {
             display: flex;
             flex-direction: column;
 
-            &:nth-child(1) {
-              font-size: 5rem;
+
+            span:nth-child(1) {
+              font-size: 2rem;
+              border: 2px solid black;
+              border-left: none;
+              border-top: none;
+              border-right: none;
             }
-
+            
+            span:nth-child(2) {
+              font-size: 2rem;
+            }
           }
-
        
           &__number {
             font-family: 'Inter', sans-serif;
             font-weight: 400;
             font-size: 4.8rem;
           }
-         }
+        }
 
-          &__image {
-            max-width: 38rem
-          }
+        &__image {
+          max-width: 38rem
+        }
 
-          &__title {
-            @extend %title;
-          }
+        &__title {
+          @extend %title;
+        }
 
-          &__text {
-         
-            @extend %cardText;
-          }
-          &__title {
-            
-          }
-          &__title {
-            
-          }
+        &__text { 
+          @extend %cardText;
         }
       }
-   }
+    }
+  }
 }

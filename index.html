@@ -12,12 +12,12 @@
 </head>
 <body class="body">
   <button class="button pay-button">
-    <span>оплатить услуги</span>
+    <span>Оплатить услуги</span>
     <img src="./src/assets/logos/wallet.png" alt="wallet">
   </button>
   <div class="container">
-    <header class="header header__wrapper">
-      <div class="logo header__wrapper">
+     <header class="header header__wrapper">
+      <div class="logo logo__wrapper">
         <a href ="index.html" class="logo__link">
           <img class="logo__image" src="./src/assets/logos/site-logo.png" alt="logo">
         </a>
@@ -50,45 +50,60 @@
           </li>
         </ul>
       </nav>
-      <div class="header__number">
-        <a href="#">+7 (3496) 45-80-00</a>
+      <div class="header__phone">
+        <a class="header__number" href="tel:+74951234567"><span>+7 (3496) 45-80-00</span></a>
+        <img class="header__phone-logo" src="./src/assets/logos/phone-call.png" alt="phone">
       </div>
-    </header>
-    <main class="main">
+    </header> 
+     <main class="main">
       <section class="systems">
         <div class="systems__content">
           <h1 class="title systems__title">Системы видеонаблюдения по отличной цене <br> в  Ноябрьске</h1>
-          <button class="button">Подключить</button>
+          <button class="button systems__button">Подключить</button>
         </div>
         <div class="systems__image">
           <img class="systems-image" src="./src/assets/images/main-banner.jpg" alt="camera-image">
         </div>
       </section>
-      <section class="service">
+      <section class="service service__wrapper">
         <h2 class="title service__title">Доступные услуги</h2>
-         <div class="card-layout">
+         <div class="card-layout card-layout__wrapper">
           <div class="card-layout__card card">
             <img class="card__image" src="./src/assets/images/card1.jpg" alt="">
+            <div class="card__content">
             <h5 class="card__title">
-              Городские камеры
+             Городские камеры
             </h5>
-            <span class="card__text">Будьте в курсе всех событий не выходя из дома</span>
-            <div class="card-bottom">
-              <span class="card__price">0 руб/мес</span>
+            <span class="card__text">
+              Будьте в курсе всех событий не выходя из дома</span>
+            <div class="card__bottom">
+              <div class="price">
+                <span class="price__number">0</span>
+                <div class="price__subprice">
+                  <span>руб</span><span>мес</span>
+                </div>
+              </div>
               <button class="button card__button">Узнать подробнее</button>
             </div>
           </div>
+          </div>
           <div class="card-layout__card card">
             <img class="card__image" src="./src/assets/images/card2.jpg" alt="">
+            <div class="card__content">
             <h5 class="card__title">
               Дворовые камеры
             </h5>
-            <span class="card__text">
-              Наблюдайте за вашим имуществом не выходя из дома через любое устройство</span>
-            <div class="card-bottom">
-              <span class="card__price">0 руб/мес</span>
+            <span class="card__text">Наблюдайте за вашим имуществом не выходя из дома через любое устройство</span>
+            <div class="card__bottom">
+              <div class="price">
+                <span class="price__number">0</span>
+                <div class="price__subprice">
+                  <span>руб</span><span>мес</span>
+                </div>
+              </div>
               <button class="button card__button">Узнать подробнее</button>
             </div>
+          </div>
           </div>
           <div class="card-layout__card card">
             <img class="card__image" src="./src/assets/images/card3.jpg" alt="">
@@ -100,6 +115,7 @@
               Где бы вы ни находились, вы всегда можете узнать о происходящем дома с любого устройства</span>
             <div class="card__bottom">
               <div class="price">
+                <span class="price__up-number">От</span>
                 <span class="price__number">350</span>
                 <div class="price__subprice">
                   <span>руб</span><span>мес</span>
@@ -110,8 +126,8 @@
           </div>
           </div>
          </div>
-      </section>
-    </main>
+      </section> 
+    </main> 
   </div>
   <script src="./src/index.js"></script>
 </body>

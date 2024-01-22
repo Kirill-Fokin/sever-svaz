@@ -326,7 +326,7 @@ template {
   line-height: 130%;
 }
 
-.header .header__number a, .header .menu__link {
+.header a, .header .menu__link, .pay-button, button {
   font-family: "Inter", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
@@ -347,7 +347,6 @@ button {
   border-radius: 0.8rem;
   background-color: #EE2523;
   color: white;
-  font-size: 2rem;
   -webkit-transition: all 1s;
   transition: all 1s;
 }
@@ -363,8 +362,23 @@ button:hover {
 }
 
 .pay-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-column-gap: 1.7rem;
+     -moz-column-gap: 1.7rem;
+          column-gap: 1.7rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 500;
   position: fixed;
   top: 50%;
+  width: 21.6rem;
+  height: 8.6rem;
   right: 0;
 }
 
@@ -373,12 +387,17 @@ button:hover {
           box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
 html {
   font-size: 10px;
 }
 
 body {
   position: relative;
+  overflow: hidden;
 }
 
 body {
@@ -415,7 +434,7 @@ a {
           flex-direction: column;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .container {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -496,7 +515,7 @@ a {
           transform: translateY(0) rotate(-45deg);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header__burger-btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -514,8 +533,39 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.header .logo__wrapper {
+  position: relative;
+}
+.header__menu {
+  padding-right: 2.8rem;
+  margin-top: -1.4rem;
+}
 .header__wrapper {
-  padding-top: 0.5rem;
+  padding-top: 1.3rem;
+  padding-bottom: 0rem;
+}
+.header__phone {
+  margin-top: -1rem;
+}
+.header__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  right: 0.3rem;
+}
+.header__number span {
+  text-align: center;
+}
+.header__phone-logo {
+  display: none;
+  max-width: 3rem;
 }
 .header .menu__list {
   display: -webkit-box;
@@ -524,13 +574,17 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-column-gap: 1rem;
-     -moz-column-gap: 1rem;
-          column-gap: 1rem;
+  -webkit-column-gap: 3.6rem;
+     -moz-column-gap: 3.6rem;
+          column-gap: 3.6rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 .header .menu__link {
   display: block;
-  height: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,26 +601,11 @@ a {
 .header .menu__link:hover {
   color: #EE2523;
 }
-.header .header__number .phonelogo {
-  display: block;
-  width: 3rem;
-  height: 3rem;
-  background-image: url("/src/assets/logos/logo-phone.png");
-}
-.header .header__number a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.header a {
   color: #EE2523;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .header.open .menu {
     right: 0;
   }
@@ -590,6 +629,14 @@ a {
     display: none;
   }
 }
+@media (max-width: 1440px) {
+  .header__phone-logo {
+    display: block;
+  }
+  .header__number span {
+    display: none;
+  }
+}
 .main .systems {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -599,17 +646,32 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.main .systems__content {
+  position: absolute;
+  padding-top: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 3.5rem;
+}
 .main .systems .title {
-  max-width: 90rem;
+  max-width: 71rem;
 }
 .main .systems-image {
-  max-width: 100%;
   height: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
+  max-width: 80.4rem;
+  left: 17rem;
+  margin-left: 88rem;
+  height: 41.2rem;
 }
 .main .service {
   display: -webkit-box;
@@ -623,6 +685,9 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.main .service__wrapper {
+  padding-top: 6.8rem;
+}
 .main .service .title {
   -ms-flex-item-align: start;
       align-self: flex-start;
@@ -633,9 +698,12 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-column-gap: 2rem;
-     -moz-column-gap: 2rem;
-          column-gap: 2rem;
+  -webkit-column-gap: 6rem;
+     -moz-column-gap: 6rem;
+          column-gap: 6rem;
+}
+.main .service .card-layout__wrapper {
+  padding-top: 4.7rem;
 }
 .main .service .card-layout .card {
   display: -webkit-box;
@@ -645,37 +713,79 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 44rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  row-gap: 2rem;
+  row-gap: 2.5rem;
+  padding: 4rem 3rem;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+.main .service .card-layout .card__title {
+  font-size: 2.4rem;
+}
+.main .service .card-layout .card__text {
+  color: gray;
+  line-height: 1.9rem;
+  height: 8rem;
+}
+.main .service .card-layout .card__image {
+  max-width: 38rem;
 }
 .main .service .card-layout .card__bottom {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-top: -0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 3rem;
+     -moz-column-gap: 3rem;
+          column-gap: 3rem;
 }
 .main .service .card-layout .card__content {
   max-width: 38rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1rem;
 }
 .main .service .card-layout .card .price {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-column-gap: 1rem;
+     -moz-column-gap: 1rem;
+          column-gap: 1rem;
+  margin-top: 0rem;
+  width: 13rem;
+}
+.main .service .card-layout .card .price__up-number {
+  font-size: 2rem;
+  font-family: Inter, sans-serif;
+  font-size: 2.4rem;
+  font-family: 500;
+  position: relative;
+  top: 0.6rem;
 }
 .main .service .card-layout .card .price__subprice {
   display: -webkit-box;
@@ -686,8 +796,15 @@ a {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.main .service .card-layout .card .price__subprice:nth-child(1) {
-  font-size: 5rem;
+.main .service .card-layout .card .price__subprice span:nth-child(1) {
+  font-size: 2rem;
+  border: 2px solid black;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+}
+.main .service .card-layout .card .price__subprice span:nth-child(2) {
+  font-size: 2rem;
 }
 .main .service .card-layout .card .price__number {
   font-family: "Inter", sans-serif;
@@ -697,7 +814,7 @@ a {
 .main .service .card-layout .card__image {
   max-width: 38rem;
 }
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .main .service .card-layout .card {
     max-width: 27.4rem;
   }

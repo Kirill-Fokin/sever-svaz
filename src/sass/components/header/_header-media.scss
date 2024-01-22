@@ -26,3 +26,15 @@
   @include mobile{
   
 }
+
+@media (max-width: 1440px) {
+  .header__phone-logo {
+    display: block;
+  }
+
+  .header__number {
+    span {
+      display: none;
+    }
+  }
+}

@@ -1,11 +1,11 @@
 button {
+  @extend %ulText;
   width:  29rem;
   height:  5rem;
   border: none;
   border-radius: 0.8rem;;
   background-color: $color-primary;
   color: white;
-  font-size: 2rem;
   transition: all 1s;
 
   &:hover {
@@ -21,8 +21,19 @@ button {
 }
 
 .pay-button {
+  @extend %ulText;
+  display: flex;
+  justify-content: center;
+  column-gap: 1.7rem;
+  align-items: center;
+  font-weight: 500;
   position: fixed;
   top:50%;
+  width: 21.6rem;
+  height: 8.6rem;
   right: 0;
+
+
+  
 }
 
