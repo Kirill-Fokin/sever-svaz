@@ -362,6 +362,7 @@ button:hover {
 }
 
 .pay-button {
+  z-index: 9999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -382,6 +383,54 @@ button:hover {
   right: 0;
 }
 
+@media (max-width: 1200px) {
+  .card__button {
+    margin-left: -1rem;
+    width: 26rem;
+    height: 4.8rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+  }
+  .card__button-two {
+    margin-left: -7rem;
+  }
+  .card__button-three {
+    margin-left: -5rem;
+    margin-top: 0rem;
+  }
+  button {
+    width: 26rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+  }
+}
+@media (max-width: 500px) {
+  .pay-button {
+    z-index: 9999;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 1.7rem;
+       -moz-column-gap: 1.7rem;
+            column-gap: 1.7rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-weight: 500;
+    position: fixed;
+    top: 50%;
+    width: 14.5rem;
+    height: 5.4rem;
+    right: 0;
+  }
+  button {
+    font-size: 1.8rem;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -397,7 +446,8 @@ html {
 
 body {
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 9999;
 }
 
 body {
@@ -434,11 +484,20 @@ a {
           flex-direction: column;
 }
 
+.price-extended {
+  position: relative;
+  top: 2rem !important;
+}
+
 @media (max-width: 1200px) {
   .container {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
-    max-width: 65.4rem;
+    max-width: 68.8rem;
+  }
+  .container .price-extended {
+    position: relative;
+    top: 4rem !important;
   }
 }
 @media (max-width: 500px) {
@@ -451,10 +510,10 @@ a {
 .header__burger-btn {
   display: block;
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 4.4rem;
-  height: 4.4rem;
+  top: 1rem;
+  right: 3rem;
+  width: 4rem;
+  height: 4rem;
   background-color: white;
   outline: none;
   z-index: 9999999;
@@ -472,8 +531,8 @@ a {
 .header__burger-btn span {
   display: block;
   position: absolute;
-  width: 3rem;
-  height: 4px;
+  width: 2.4rem;
+  height: 3px;
   bottom: 1.4rem;
   background-color: #EE2523;
   -webkit-transition: background-color 0.3s, opacity 0.3s, -webkit-transform 0.5s;
@@ -488,13 +547,18 @@ a {
 }
 
 .header__burger-btn span:nth-child(1) {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.header__burger-btn span:nth-child(2) {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
 }
 
 .header__burger-btn span:nth-child(3) {
-  -webkit-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
 }
 
 .header.open .header__burger-btn span {
@@ -522,6 +586,12 @@ a {
     display: flex;
   }
 }
+@media (max-width: 500px) {
+  .header__burger-btn {
+    top: 3rem;
+    right: 3.5rem;
+  }
+}
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -532,6 +602,66 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.header .subitem {
+  width: 22.5rem;
+  height: 11.4rem;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.header .subitem li {
+  font-size: 1.6rem;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+.header .subitem li:hover {
+  color: red;
+}
+.header .subitem2 {
+  width: 22.5rem;
+  height: 11.4rem;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: white;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+.header .subitem2 li {
+  font-size: 1.6rem;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+}
+.header .subitem2 li:hover {
+  color: red;
+}
+.header__account {
+  position: absolute;
+  top: 2rem;
+  right: 23rem;
+  display: none;
 }
 .header .logo__wrapper {
   position: relative;
@@ -567,7 +697,17 @@ a {
   display: none;
   max-width: 3rem;
 }
+.header .menu__item:nth-child(3):hover .subitem {
+  opacity: 1;
+  visibility: visible;
+}
+.header .menu__item:nth-child(6):hover .subitem2 {
+  opacity: 1;
+  visibility: visible;
+}
 .header .menu__list {
+  position: relative;
+  z-index: 999999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -637,7 +777,30 @@ a {
     display: none;
   }
 }
+@media (max-width: 1200px) {
+  .header__account {
+    position: absolute;
+    top: 2rem;
+    right: 23rem;
+    display: block;
+  }
+  .header .header__phone {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .header {
+    padding-top: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  .header__account {
+    top: 4rem;
+    right: 14rem;
+  }
+}
 .main .systems {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -646,8 +809,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.main .systems__wrapper {
+  padding-top: 6rem;
+  padding-bottom: 5.8rem;
+}
 .main .systems__content {
-  position: absolute;
   padding-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -656,12 +822,16 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  row-gap: 3.5rem;
+  row-gap: 3.7rem;
+  z-index: 99;
 }
 .main .systems .title {
   max-width: 71rem;
 }
 .main .systems-image {
+  position: absolute;
+  top: 0;
+  right: -23rem;
   height: auto;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -669,8 +839,6 @@ a {
   -ms-grid-column-align: center;
       justify-self: center;
   max-width: 80.4rem;
-  left: 17rem;
-  margin-left: 88rem;
   height: 41.2rem;
 }
 .main .service {
@@ -685,8 +853,11 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
+.main .service__title {
+  margin-top: 3.5rem;
+}
 .main .service__wrapper {
-  padding-top: 6.8rem;
+  padding-top: 3.8rem;
 }
 .main .service .title {
   -ms-flex-item-align: start;
@@ -701,6 +872,7 @@ a {
   -webkit-column-gap: 6rem;
      -moz-column-gap: 6rem;
           column-gap: 6rem;
+  margin-top: -1.8rem;
 }
 .main .service .card-layout__wrapper {
   padding-top: 4.7rem;
@@ -722,13 +894,35 @@ a {
   -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
+.main .service .card-layout .card__title-two {
+  position: relative;
+  bottom: -0.5rem;
+}
+.main .service .card-layout .card .card__bottom-two {
+  position: relative;
+  bottom: 3rem;
+}
+.main .service .card-layout .card-two {
+  margin-top: 1rem;
+}
+.main .service .card-layout .card__button-two {
+  margin-top: 3rem;
+}
 .main .service .card-layout .card__title {
   font-size: 2.4rem;
 }
 .main .service .card-layout .card__text {
+  max-width: 38rem;
   color: gray;
   line-height: 1.9rem;
   height: 8rem;
+}
+.main .service .card-layout .card__text-one {
+  max-width: 32rem;
+}
+.main .service .card-layout .card__text-two {
+  position: relative;
+  top: 1.5rem;
 }
 .main .service .card-layout .card__image {
   max-width: 38rem;
@@ -780,12 +974,19 @@ a {
   width: 13rem;
 }
 .main .service .card-layout .card .price__up-number {
+  position: relative;
+  top: 0.5rem;
+}
+.main .service .card-layout .card .price-two {
+  position: relative;
+  top: 2rem;
+}
+.main .service .card-layout .card .price__up-number {
   font-size: 2rem;
   font-family: Inter, sans-serif;
   font-size: 2.4rem;
   font-family: 500;
   position: relative;
-  top: 0.6rem;
 }
 .main .service .card-layout .card .price__subprice {
   display: -webkit-box;
@@ -815,7 +1016,227 @@ a {
   max-width: 38rem;
 }
 @media (max-width: 1200px) {
+  .main .systems__title {
+    margin-top: -1.4rem;
+  }
+  .main .systems__wrapper {
+    padding-top: 9rem;
+    padding-bottom: 8.4rem;
+  }
+  .main .systems__content {
+    z-index: 9;
+    padding-top: 0.1rem;
+    row-gap: 3.6rem;
+  }
+  .main .systems .title {
+    font-size: 4rem;
+    max-width: 61rem;
+  }
+  .main .systems-image {
+    top: -1rem;
+    right: -36rem;
+  }
+  .main .service__wrapper {
+    padding-top: 6.2rem;
+  }
+  .main .service__title {
+    margin-top: 0rem;
+    margin-left: 0.7rem;
+  }
+  .main .service .title {
+    font-size: 3.2rem;
+    font-weight: 600;
+  }
+  .main .service .card-layout {
+    margin-top: -2.5rem;
+    row-gap: 0.5rem;
+    -webkit-column-gap: 2rem;
+       -moz-column-gap: 2rem;
+            column-gap: 2rem;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
   .main .service .card-layout .card {
+    max-width: 33.4rem;
+    row-gap: 3.3rem;
+  }
+  .main .service .card-layout .card__text {
+    top: 1rem;
+  }
+  .main .service .card-layout .card__text-two {
+    position: relative;
+    bottom: 1.5rem;
+  }
+  .main .service .card-layout .card__button-two {
+    margin-left: -2rem;
+    position: relative;
+    top: 1.5rem;
+  }
+  .main .service .card-layout .card__button-three {
+    margin-left: -1.5rem;
+  }
+  .main .service .card-layout .card:nth-child(3) {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    position: relative;
+    row-gap: 7rem;
+  }
+  .main .service .card-layout .card-title-special {
+    position: absolute;
+    top: 25rem;
+  }
+  .main .service .card-layout .card__text {
+    height: 7.6rem;
     max-width: 27.4rem;
+    text-align: left;
+  }
+  .main .service .card-layout .card__text-one {
+    max-width: 23.4rem;
+  }
+  .main .service .card-layout .card__text-three {
+    max-width: 21.4rem;
+    padding-bottom: 9rem;
+    line-height: auto;
+  }
+  .main .service .card-layout .card__image {
+    max-width: 27.4rem;
+  }
+  .main .service .card-layout .card__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .main .service .card-layout .card .price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+  .main .service .card-layout .card .price__two {
+    position: relative;
+    top: 4rem;
+  }
+  .main .service .card-layout .card .price__number {
+    font-size: 4rem;
+    padding-bottom: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .main .systems__wrapper {
+    padding-bottom: 5.4rem;
+  }
+  .main .systems__content {
+    z-index: 9;
+  }
+  .main .systems__title {
+    margin-top: -3.5rem;
+  }
+  .main .systems .title {
+    font-size: 3.8rem;
+    max-width: 40rem;
+  }
+  .main .systems-image {
+    top: -1rem;
+    right: -45rem;
+  }
+  .main .service__title {
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+  }
+  .main .service .title {
+    font-size: 3.2rem;
+  }
+  .main .service .card-layout {
+    row-gap: 4rem;
+    -webkit-column-gap: 0rem;
+       -moz-column-gap: 0rem;
+            column-gap: 0rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .main .service .card-layout .card {
+    max-width: 60rem;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 39rem;
+  }
+  .main .service .card-layout .card__text-three {
+    position: relative;
+    top: 1.5rem;
+  }
+  .main .service .card-layout .card__bottom-one {
+    position: relative;
+    top: -0.5rem;
+  }
+  .main .service .card-layout .card__button-two {
+    position: relative;
+    right: 2.5rem;
+    top: 0.7rem;
+  }
+  .main .service .card-layout .card__button-three {
+    position: relative;
+    right: 1.5rem;
+    top: 0.2rem;
+  }
+  .main .service .card-layout .card-one {
+    position: relative;
+    margin-top: 2rem;
+  }
+  .main .service .card-layout .card-two {
+    position: relative;
+    margin-top: -2rem;
+  }
+  .main .service .card-layout .card-three {
+    position: relative;
+    margin-top: -3rem;
+  }
+  .main .service .card-layout .card:nth-child(1) {
+    padding: 3.5rem 4rem 4rem 3rem;
+  }
+  .main .service .card-layout .card__text {
+    max-width: 35.4rem;
+  }
+  .main .service .card-layout .card__text-one {
+    max-width: 23.4rem;
+  }
+  .main .service .card-layout .card__text-three {
+    max-width: 30.4rem;
+  }
+  .main .service .card-layout .card__image {
+    width: 31.5rem !important;
+  }
+  .main .service .card-layout .card__image {
+    max-width: 31.5rem;
+    width: 31.5rem;
+    height: 18rem;
+  }
+  .main .service .card-layout .card__title {
+    font-size: 2.8rem;
+  }
+}
+@media (max-width: 67rem) {
+  .main .service .card-layout {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+@media (max-width: 76.8rem) {
+  .main .service .card-layout {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+@media (max-width: 63.8rem) {
+  .main .service .card-layout {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }

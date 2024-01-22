@@ -12,8 +12,8 @@ html {
 
 body {
   position: relative;
-  // background-color: #F8F8F8;
-  overflow: hidden;
+  overflow-x: hidden;
+  z-index: 9999;
 }
 
 .title {
@@ -43,10 +43,20 @@ a {
   flex-direction: column;
 }
 
+.price-extended {
+  position: relative;
+  top: 2rem !important;
+}
+
 @include tablet{
   .container {
     box-sizing: border-box;
-    max-width: 65.4rem;   
+    max-width: 68.8rem;   
+
+    .price-extended {
+      position: relative;
+      top: 4rem !important;
+    }
   }
 }
 

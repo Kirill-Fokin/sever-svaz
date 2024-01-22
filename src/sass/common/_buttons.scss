@@ -1,3 +1,5 @@
+// @import "./mixins";
+
 button {
   @extend %ulText;
   width:  29rem;
@@ -15,12 +17,15 @@ button {
   }
 }
 
+
+
 .card__button {
   width: 18rem;
   height: 4.8rem;
 }
 
 .pay-button {
+  z-index: 9999;
   @extend %ulText;
   display: flex;
   justify-content: center;
@@ -32,8 +37,90 @@ button {
   width: 21.6rem;
   height: 8.6rem;
   right: 0;
-
-
-  
 }
 
+
+
+@include tablet{
+
+  .card__button {
+    margin-left: -1rem;
+    width: 26rem;
+    height: 4.8rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 0.5rem;
+
+
+    &-two {
+     margin-left: -7rem;
+    }
+
+    &-three {
+      margin-left: -5rem;
+      margin-top: 0rem;;
+     }
+  }
+
+  
+  button {
+    // @extend %ulText;
+    width:  26rem;
+    // height:  5rem;
+    // border: none;
+    // border-radius: 0.8rem;;
+    // background-color: $color-primary;
+    // color: white;
+    // transition: all 1s;
+    font-size: 1.8rem;
+    font-weight: 600;
+
+  
+    &:hover {
+      // background-color: white;
+      // color: $color-primary;
+      // border: 1px solid red;
+    }
+  }
+}
+
+
+
+
+@include  mobile{
+
+
+  .pay-button {
+    z-index: 9999;
+    @extend %ulText;
+    display: flex;
+    justify-content: center;
+    column-gap: 1.7rem;
+    align-items: center;
+    font-weight: 500;
+    position: fixed;
+    top:50%;
+    width: 14.5rem;
+    height: 5.4rem;
+    right: 0;
+  }
+
+  button {
+    font-size: 1.8rem;
+    // @extend %ulText;
+    // width:  29rem;
+    // height:  5rem;
+    // border: none;
+    // border-radius: 0.8rem;;
+    // background-color: $color-primary;
+    // color: white;
+    // transition: all 1s;
+  
+    &:hover {
+      // background-color: white;
+      // color: $color-primary;
+      // border: 1px solid red;
+    }
+  }
+
+}

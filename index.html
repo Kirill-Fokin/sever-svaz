@@ -12,7 +12,7 @@
 </head>
 <body class="body">
   <button class="button pay-button">
-    <span>Оплатить услуги</span>
+    <span сlass="pay-button__text">Оплатить услуги</span>
     <img src="./src/assets/logos/wallet.png" alt="wallet">
   </button>
   <div class="container">
@@ -32,9 +32,14 @@
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#" id="about">Телевиденье</a>
+
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#" id="about">Выгодно</a>
+            <ul class="subitem">
+              <li>Интернет+TV</li>
+              <li>Конструктор тарифа</li>
+            </ul>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#" id="about">Видеонаблюдение</a>
@@ -44,19 +49,26 @@
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#" id="about">Информация</a>
+            <ul class="subitem2">
+              <li>Новости</li>
+              <li>Вакансии</li>
+            </ul>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#" id="about">Контакты</a>
           </li>
         </ul>
       </nav>
+      <div class="header__account account">
+        <img class="accoun__logo" src="./src/assets/logos/user.png" alt="account">
+      </div>
       <div class="header__phone">
         <a class="header__number" href="tel:+74951234567"><span>+7 (3496) 45-80-00</span></a>
         <img class="header__phone-logo" src="./src/assets/logos/phone-call.png" alt="phone">
       </div>
     </header> 
      <main class="main">
-      <section class="systems">
+      <section class="systems systems__wrapper">
         <div class="systems__content">
           <h1 class="title systems__title">Системы видеонаблюдения по отличной цене <br> в  Ноябрьске</h1>
           <button class="button systems__button">Подключить</button>
@@ -68,13 +80,13 @@
       <section class="service service__wrapper">
         <h2 class="title service__title">Доступные услуги</h2>
          <div class="card-layout card-layout__wrapper">
-          <div class="card-layout__card card">
+          <div class="card-layout__card card card-one">
             <img class="card__image" src="./src/assets/images/card1.jpg" alt="">
             <div class="card__content">
             <h5 class="card__title">
              Городские камеры
             </h5>
-            <span class="card__text">
+            <span class="card__text card__text-one">
               Будьте в курсе всех событий не выходя из дома</span>
             <div class="card__bottom">
               <div class="price">
@@ -83,37 +95,37 @@
                   <span>руб</span><span>мес</span>
                 </div>
               </div>
-              <button class="button card__button">Узнать подробнее</button>
+              <button class="button card__button card__bottom-one">Узнать подробнее</button>
             </div>
           </div>
           </div>
-          <div class="card-layout__card card">
+          <div class="card-layout__card card card-two">
             <img class="card__image" src="./src/assets/images/card2.jpg" alt="">
             <div class="card__content">
-            <h5 class="card__title">
+            <h5 class="card__title card__title-two">
               Дворовые камеры
             </h5>
-            <span class="card__text">Наблюдайте за вашим имуществом не выходя из дома через любое устройство</span>
-            <div class="card__bottom">
-              <div class="price">
+            <span class="card__text card__text-two">Наблюдайте за вашим имуществом не выходя из дома через любое устройство</span>
+            <div class="card__bottom card__bottom-two">
+              <div class="price price-two price-extended">
                 <span class="price__number">0</span>
                 <div class="price__subprice">
                   <span>руб</span><span>мес</span>
                 </div>
               </div>
-              <button class="button card__button">Узнать подробнее</button>
+              <button class="button card__button card__button-two">Узнать подробнее</button>
             </div>
           </div>
           </div>
-          <div class="card-layout__card card">
+          <div class="card-layout__card card card-three">
             <img class="card__image" src="./src/assets/images/card3.jpg" alt="">
             <div class="card__content">
-            <h5 class="card__title">
+            <h5 class="card__title card-title-special">
               Персональные камеры
             </h5>
-            <span class="card__text">
+            <span class="card__text card__text-three">
               Где бы вы ни находились, вы всегда можете узнать о происходящем дома с любого устройства</span>
-            <div class="card__bottom">
+            <div class="card__bottom  card__bottom-three">
               <div class="price">
                 <span class="price__up-number">От</span>
                 <span class="price__number">350</span>
@@ -121,7 +133,7 @@
                   <span>руб</span><span>мес</span>
                 </div>
               </div>
-              <button class="button card__button">Узнать подробнее</button>
+              <button class="button card__button card__button-three">Узнать подробнее</button>
             </div>
           </div>
           </div>

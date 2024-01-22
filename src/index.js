@@ -1,21 +1,68 @@
-//  function burgerInit() {
-//     const burger = document.querySelector('.header__burger-btn')
-//     const header = document.querySelector('.header')
-    
-//     burger.addEventListener('click', () =>  header.classList.contains('open') ?
-//     header.classList.remove('open') : header.classList.add('open'));
-//     }  
+
+
 
 
     window.addEventListener("resize", () => {
-      const 
+
+      const cardLayout = document.querySelector('.card-layout')
+
+      if (window.innerWidth < 1072 && window.innerWidth > 687) {
+
+        cardLayout.style.justifyContent = 'left';
 
 
+      } else {
 
-      const mainTitle = document.querySelector('.systems__title')
+        cardLayout.style.justifyContent = 'center';
+      }
 
-      const percent = window.innerWidth/100
-      console.log(percent)
-      mainTitle.style.width =`${710 - percent}px`;
-      console.log( mainTitle.style.width )
+    })
+
+
+      window.addEventListener("resize", () => {
+
+
+    //  console.log(payButtonText)
+      if (window.innerWidth > 491 ) {
+        console.log(1)
+        document.querySelector('.pay-button').childNodes[1].textContent = 'Оплатить услуги'
+
+      } else {
+        console.log(2)
+        document.querySelector('.pay-button').childNodes[1].textContent  = 'Оплатить'
+      }
+
     });
+
+
+
+    window.addEventListener("load", () => {
+
+
+      //  console.log(payButtonText)
+        if (window.innerWidth > 491 ) {
+          console.log(1)
+          document.querySelector('.pay-button').childNodes[1].textContent = 'Оплатить услуги'
+  
+        } else {
+          console.log(2)
+          document.querySelector('.pay-button').childNodes[1].textContent  = 'Оплатить'
+        }
+  
+      });
+  
+
+    window.addEventListener("DOMContentLoaded", () => {
+      
+      console.log('ready')
+      const cardLayout = document.querySelector('.card-layout')
+      // console.log(cardLayout)
+      if (window.innerWidth < 1072 && window.innerWidth > 687) {
+        console.log('yes')
+        cardLayout.style.justifyContent = 'left';
+
+      } else {
+        cardLayout.style.justifyContent = 'center';
+      }
+    })
+

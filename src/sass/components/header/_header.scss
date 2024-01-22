@@ -3,6 +3,68 @@
   justify-content: space-between;
   align-items: center;
 
+
+  .subitem {
+    width: 22.5rem;
+    height: 11.4rem;
+    // border: 1px solid black;
+    visibility:hidden;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    transition: all 1s;
+
+    li {
+     font-size: 1.6rem;
+     font-family: Inter, sans-serif;
+     font-weight:400 ; 
+
+     &:hover {
+      color: red;
+     }
+    }
+
+  }
+
+  .subitem2 {
+    width: 22.5rem;
+    height: 11.4rem;
+    // border: 1px solid black;
+    visibility:hidden;
+    opacity: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    transition: all 1s;
+
+    li {
+     font-size: 1.6rem;
+     font-family: Inter, sans-serif;
+     font-weight:400 ;
+     
+     &:hover {
+      color: red;
+     }
+    }
+
+  }
+  
+  
+
+
+  &__account {
+    position: absolute;
+    top: 2rem;
+    right: 23rem;
+    display: none;
+  }
+ 
+
   .logo {
     &__wrapper {
       position: relative;
@@ -17,6 +79,7 @@
   }
 
   &__wrapper {
+
     padding-top: 1.3rem;
     padding-bottom: 0rem;
   }
@@ -44,14 +107,33 @@
   }
 
   .menu {
+
+
+    &__item {
+      &:nth-child(3):hover .subitem {
+        opacity: 1;
+        visibility:visible;
+      }
+      &:nth-child(6):hover .subitem2 {
+        opacity: 1;
+        visibility:visible;
+      }
+    }
     
     &__list {
+      position: relative;
+      z-index: 999999;
       display: flex;
       justify-content: space-between;
       column-gap: 3.6rem;
       justify-content: flex-start;
       align-content: flex-start;
+
+   
+     
     }
+
+
 
     &__link {
       @extend %ulText;
@@ -61,6 +143,10 @@
       justify-content: center;
       text-align: center;
       transition: all .5s;
+
+     
+
+     
 
       &:hover {
         color: $color-primary;
