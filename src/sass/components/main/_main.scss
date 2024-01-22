@@ -1,0 +1,247 @@
+.main {
+  .systems {
+    
+    position: relative;
+    // overflow: hidden;
+    display: flex;
+    background-color: #F8F8F8;
+    align-items: center;
+  
+
+
+    &__wrapper {
+      padding-top: 6rem;
+      padding-bottom: 5.8rem;
+    }
+
+    &__title {
+
+    }
+    
+
+    &__content {
+      // position: absolute;
+      padding-top: 1rem;;
+      display: flex;
+      flex-direction: column;
+      row-gap: 3.7rem;
+      z-index: 99;
+    }
+
+    &__button {
+    // display: none;
+    }
+
+    .title {
+      max-width: 71rem;
+      @extend %main-title;
+      
+    }
+
+    &-image {
+      // max-width:100%;
+      position: absolute;
+      top:0;
+      // z-index: 9;
+      right: -23rem;
+      
+
+      height:auto;
+      align-self: center;
+      justify-self: center;
+      // position: relative;
+      max-width: 80.4rem;
+      // left: 17rem;
+      // margin-left:88rem;
+      height: 41.2rem;
+    }
+   }
+
+  .service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: space-between;
+
+    &__title {
+      margin-top: 3.5rem;
+    }
+
+    &__wrapper {
+      padding-top: 3.8rem;
+    }
+   
+    .title {
+      align-self: flex-start;
+      @extend %title;
+    }
+
+    .card-layout {
+      
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 6rem;
+      margin-top: -1.8rem;
+      
+      // justify-content: center;
+      // justify-items: flex-start;
+      // align-items: flex-start;
+      // align-content: flex-start;
+
+      &__wrapper {
+        padding-top: 4.7rem;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 44rem;
+        row-gap: 2.5rem;
+        padding: 4rem 3rem;
+        -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+         box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+        //  max-height: 53.5rem;
+
+
+        &__title-two {
+          position: relative;
+          bottom: -0.5rem;
+        }
+
+         .card__bottom-two {
+         position: relative;
+         bottom: 3rem;
+         }
+
+         &-two {
+           margin-top: 1rem;
+         }
+
+         &:nth-child(2) {
+          //  margin-top: 2rem;
+         }
+        
+
+         &__button-two {
+          margin-top: 3rem;
+        }
+
+
+         &__title {
+           font-size: 2.4rem ;
+           
+         }
+
+         &__text {
+          max-width: 38rem;;
+           color: gray;
+           line-height: 1.9rem;
+           height: 8rem;
+
+
+           &-one {
+            max-width: 32rem;;
+           }
+
+           &-two {
+           position: relative;
+           top: 1.5rem;
+           }
+         }
+
+       &__image {
+        max-width: 38rem;
+       }
+
+        &__bottom {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: -0.5rem;
+          align-items: center;
+          column-gap: 3rem;
+
+         
+
+         
+        }
+
+        &__content {
+          max-width: 38rem;
+          display: flex;
+          flex-direction: column;
+          row-gap: 1rem;
+        }
+
+        .price {
+          display: flex;
+          // justify-content: center;
+          align-items: center;
+          justify-content: flex-start;
+          column-gap: 1rem;
+          margin-top: 0rem;
+          width: 13rem;
+
+          &__up-number {
+            position: relative;
+            top: 0.5rem;
+          }
+
+          &-two {
+            position: relative;
+            top: 2rem;
+          }
+
+          
+          &__up-number {
+            font-size: 2rem;
+            font-family: Inter,sans-serif;
+            font-size: 2.4rem;
+            font-family: 500;
+            position: relative;
+            // top: 0.rem;
+          }
+          
+          
+          &__subprice {
+            display: flex;
+            flex-direction: column;
+
+
+            span:nth-child(1) {
+              font-size: 2rem;
+              border: 2px solid black;
+              border-left: none;
+              border-top: none;
+              border-right: none;
+            }
+            
+            span:nth-child(2) {
+              font-size: 2rem;
+            }
+          }
+       
+          &__number {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 4.8rem;
+          }
+        }
+
+        &__image {
+          max-width: 38rem
+        }
+
+        &__title {
+          @extend %title;
+        }
+
+        &__text { 
+          @extend %cardText;
+        }
+      }
+    }
+  }
+}
